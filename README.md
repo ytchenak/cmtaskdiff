@@ -25,8 +25,7 @@ CM (Synergy) Task Diff. This script creates diff of CCM task (can be used latter
 Development information
 -----------------------
 ###3DP
-* http://downloads.activestate.com/ActivePython/releases/2.6.4.10/ActivePython-2.6.4.10-win32-x86.msi
-* http://docs.activestate.com/activepython/2.6/relnotes.html
+* http://downloads.activestate.com/ActivePython/releases/2.7.2.5/ActivePython-2.7.2.5-win32-x86.msi
 * https://pyscripter.googlecode.com/files/PyScripter-v2.5.3-Setup.exe
 * http://sourceforge.net/projects/pyinstaller/files/2.0/pyinstaller-2.0.zip
 
