@@ -42,13 +42,13 @@ Development information
 * new file pathc: remove CM header (including define)
 * add option: show rejects list; show only .rej files
 * avoid patching R/O files. skip with error
-* refact: create repository only with task number
-* refact: integrate index with repository (make it as ObjectMetadataq). saving a obect to reporsitory coming wiht a object meadata. loading restore object metadata as well
-* refact: Executor is normal class, it can use singleton simulator. some commnad will never fo to simulator(e.g.patch). singletone impl through ::Instance method to enable use it in one module
+* re-factoring: create repository only with task number
+* re-factoring: integrate index with repository (make it as ObjectMetadataq). saving a object to repository coming with a object meadata. loading restore object metadata as well
+* re-factoring: Executor is normal class, it can use singleton simulator. some commnad will never fo to simulator(e.g.patch). singleton implementation through ::Instance method to enable use it in one module
 * patch file name should reflect new object name: to avoid name collision, e.g. ExitNotification.cpp_4_cpp_9.patch.
-* multiline search does not work. for now it is replaced to search for 'version'
+* multi-line search does not work. for now it is replaced to search for 'version'
 * findpath not work. return empty path. but it will be need for report and patch
-* apply patch should be more smart: use target files and not embeded file path
+* apply patch should be more smart: use target files and not embedded file path
 * find object path: today use ccm history; find last object and find use for them. last object in history can be very old. see GetLastObject;
 * extract dir diff. save as dirname.dir
 * TODO: p4 work only wiht default diff.exe (+++ c:\CmTasks\46768\new\... - make more general
