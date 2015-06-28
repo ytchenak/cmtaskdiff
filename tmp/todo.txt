@@ -1,3 +1,18 @@
+----
+support new synergy through Synergy CLI
+-  open the CLI form syergy menu 
+-- run cmstaskdiff
+-- latter it can be posible to do with a plugin
+
+
+-----
+
+the log was stopped read 
+xecute (Executor.pyc:54): command ccm delimiter not found
+xecute (Executor.pyc:54): command ccm task -show synopsis 84854 not found
+xecute (Executor.pyc:54): command ccm task 84854 -show objs -u not found
+
+-------------
 ccm histoty ....
 
 bug in CCM: the last object is wring 
