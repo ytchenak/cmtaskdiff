@@ -1,0 +1,47 @@
+ccm histoty ....
+
+bug in CCM: the last object is wring 
+
+ccm history ForecastWorkspaceViewModel.cs#236.1.1:cs:2
+
+we need don't catch the latest object. 
+
+the pattern should be : .*Object:\s+(\S+) \(<type>:<inst>\)
+
+def GetLastObject(self,obj):
+	""" get last object for the current object
+		use ccm history and find the last version
+	"""
+	(ver, type, inst ) = obj.split(":")
+	out = self.ExecuteCmd("history %s" % obj)
+	m = re.search( r".*Object:\s+(\S+)", out, re.S ) #find last occurent
+								^^^^^^	
+	if m:
+		ver_last = m.group(1)
+	prev_obj = "%s:%s:%s" % (ver_last,type,inst)
+	return prev_obj
+
+
+
+...
+Object:  ForecastWorkspaceViewModel.cs#243 (cs:2)
+Owner:   shahar
+State:   sqa
+Created: Thu May 22 15:44:37 2014
+Task:    85309
+Comment:
+changed to sqa state by GAP automatic approval
+Predecessors:
+    ForecastWorkspaceViewModel.cs#242:cs:2
+Successors:
+*****************************************************************************
+Object:  WorkspaceViewModel.cs#5 (cs:3)
+Owner:   evgeny
+State:   sqa
+Created: Tue Aug 23 10:56:42 2011
+Task:    58569
+Comment:
+changed to sqa state by GAP automatic approval
+Predecessors:
+    ForecastWorkspaceViewModel.cs#4:cs:2
+Successors:
